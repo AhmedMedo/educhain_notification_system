@@ -1,0 +1,6 @@
+credential_issued: "Your credential has been successfully issued."
+task_completed: "Bulk issuance task completed."
+approval_required: "A draft credential requires your approval."
+document_shared: "Your document has been shared."
+request_approved: "Your request has been approved."
+request_rejected: "Your request has been rejected."

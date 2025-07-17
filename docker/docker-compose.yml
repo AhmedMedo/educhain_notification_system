@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8086:8000"
+    volumes:
+      - ..:/app
+    environment:
+      - DATABASE_URL=mysql://root:123456@db:3306/educhchain?serverVersion=8.0
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: educhchain
+    ports:
+      - "3306:3306"
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
